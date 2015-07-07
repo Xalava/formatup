@@ -2,15 +2,8 @@
 
 <html>
 	<head>
-		<title>formatup</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-
-		<link rel="shortcut icon" href="images/logo.ico">
+		<title>Formatup.com</title>
+		@@include('head.html')
 
 	</head>
 	<body class="landing">
@@ -21,22 +14,8 @@
 				<!-- Header -->
 					<header id="header" class="alt">
 						<h1><a href="index.html">Formatup.com</a></h1>
-<!-- 						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="generic.html">Offre</a></li>
-											<li><a href="elements.html">Réseau</a></li>
-											<li><a href="#">Sign Up</a></li>
-											<li><a href="#">Log In</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav> -->
+					@@include('nav.html')
+
 					</header>
 
 				<!-- Banner -->
@@ -57,7 +36,7 @@
 							<header class="major">
 								<h2>L'innovation révolutionne votre industrie <br />
 								vous et vos salariés peuvent en être les meneurs</h2>
-								<p>Notre but et de vous proposer des formations innovantes associant <br />
+								<p>Nous vous proposons des formations innovantes associant <br />
 								les méthodes et outils des entrepreneurs et startups pour répondre à vos problématiques.</p>
 								<br/> <br/>
 							</header>
@@ -133,43 +112,29 @@
 					</section> -->
 
 				<!-- CTA -->
-<!-- 					<section id="cta" class="wrapper style4">
+					<section id="cta" class="wrapper style4">
 						<div class="inner">
 							<header>
-								<h2>Arcue ut vel commodo</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet eleifend fringilla.</p>
+								<h2>Nous contacter</h2>
+								<p>Contactez nous aujourd'hui pour réserver votre formation</p>
 							</header>
 							<ul class="actions vertical">
-								<li><a href="#" class="button fit special">Activate</a></li>
-								<li><a href="#" class="button fit">Learn More</a></li>
+								<li><a href="./catalogue.html" class="button fit special">Nos offres</a></li>
+								<li><a href="mailto:contact@formatup.com?Subject=Bonjour%20formatup!" class="button fit">Nous contacter</a></li>
 							</ul>
 						</div>
-					</section> -->
+					</section>
 
 				<!-- Footer -->
-					<footer id="footer">
-						<ul class="icons">
-							<li><a href="https://twitter.com/formatup" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://www.facebook.com/pages/Formatup/1638128103096528" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-<!-- 							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li> -->
-							<li><a href="mailto:xavier.lavayssiere+formatup@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; formatup</li><li> HTML5 UP</li>
-						</ul>
-					</footer>
+				@@include('footer.html')
+
 
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+		@@include('scripts.html')
+
+
 
 	</body>
 </html>

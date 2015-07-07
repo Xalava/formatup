@@ -2244,7 +2244,7 @@
 		height: 3.125em;
 		letter-spacing: 0.225em;
 		line-height: 3.125em;
-		padding: 0 2.75em;
+		padding: 0 0.75em;
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
@@ -2293,6 +2293,7 @@
 		button.small,
 		.button.small {
 			font-size: 0.8em;
+			margin: 0;
 		}
 
 		input[type="submit"].big,
