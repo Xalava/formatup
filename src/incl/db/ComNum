@@ -1,0 +1,30 @@
+@@include("offre.html', {
+	"nom": "Optimisation de trafic internet",
+	"des": "Google analytics et stratégies reseaux sociaux",
+	"prix": 1049,
+	"duree": 2
+})
+@@include("offre.html', {
+	"nom": "Création de site internet",
+	"des": "Développer en interne au moyen d'outils simples",
+	"prix": 1049,
+	"duree": 2
+})
+@@include("offre.html', {
+	"nom": "E-réputation et communication de crise",
+	"des": "S'assurer de votre image et gérer les crises",
+	"prix": 1149,
+	"duree": 2
+})
+@@include("offre.html', {
+	"nom": "Optimisation du référencement",
+	"des": "Les principes et outils du SEO",
+	"prix": 1149,
+	"duree": 2
+})
+@@include("offre.html', {
+	"nom": "Créer et animer une newsletter",
+	"des": "Fidélisez votre clientèle et réseau",
+	"prix": 1149,
+	"duree": 2
+})

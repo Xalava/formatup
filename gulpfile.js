@@ -6,7 +6,24 @@ var imagemin = require('gulp-imagemin');
 var minifyCSS = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 var fileinclude = require('gulp-file-include');
-var    watch = require('gulp-watch');
+var watch = require('gulp-watch');
+
+var sitemap = require('gulp-sitemap');
+
+// to include data from json
+// var swig = require('gulp-swig');
+// var data = require('gulp-data');
+// var getJsonData = require('https://spreadsheets.google.com/feeds/cells/1bTuZdyAJaR8GW-Pa_PKCJjkGNhMdm12X3krLIaImRYo/1/public/values?alt=json');
+
+//var getJsonData = function(file) {
+//  return require('./examples/' + path.basename(file.path) + '.json');
+//};
+
+
+
+
+
+//var offre = require('./package.json')
 
 
 // Minify & include html
@@ -81,13 +98,20 @@ gulp.task('Cname', function() {
 });
 
 
+// build sitemap
+gulp.task('sitemap', function () {
+    gulp.src('dist/**/*.html')
+        .pipe(sitemap({
+            siteUrl: 'http://www.formatup.com'
+        }))
+        .pipe(gulp.dest('./dist'));
+});
 
 /** Push build to gh-pages */
-gulp.task('deploy',['default'], function () {
+gulp.task('deploy',['default', 'sitemap'], function () {
   return gulp.src("./dist/**/*")
     .pipe(deploy())
 });
-
 
 
 

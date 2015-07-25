@@ -1,7 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Catalogue</title>
+		<title>Formatup - Catalogue des formations</title>
+		<meta name="description=" content="Catalogue de nos formations professionelles en webmarketing, technologies numériques, creativité, open innovation...">
+
 		@@include('head.html')
 	</head>
 	<body>
@@ -12,6 +14,10 @@
 				<header id="header">
 					<h1><a href="index.html">Catalogue</a></h1>
 				@@include('nav.html')
+
+
+				<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us11.list-manage.com","uuid":"263c9551b02f4af4d2c04d7b9","lid":"da668ceabc"}) })</script>
+
 
 				</header>
 
@@ -33,36 +39,17 @@
 											<tr>
 												<th>Nom</th>
 												<th>Description</th>
-												<th>Prix</th>
-												<th>durée</th>
+												<!-- <th>Prix</th> -->
+												<th>Durée</th>
 												<th> </th>
 											</tr>
 										</thead>
 										<tbody>
-										@@include("offre.html', {
-											"nom": "Optimisation de trafic internet",
-											"des": "Google analytics et stratégies reseaux sociaux",
-											"prix": 1049,
-											"duree": 2
-										})
-										@@include("offre.html', {
-											"nom": "E-réputation et communication de crise",
-											"des": "S'assurer de votre image et gérer les crises",
-											"prix": 1049,
-											"duree": 2
-										})
-										@@include("offre.html', {
-											"nom": "Référencement",
-											"des": "les principes et outils du SEO",
-											"prix": 1049,
-											"duree": 2
-										})
-										@@include("offre.html', {
-											"nom": "Créer un site internet",
-											"des": "Utiliser des outils pour developper en interne",
-											"prix": 1049,
-											"duree": 2
-										})
+										@@include('db/ComNum')
+
+
+
+										 
 										</tbody>
 									</table>
 								</div>
@@ -78,24 +65,14 @@
 											<tr>
 												<th>Nom</th>
 												<th>Description</th>
-												<th>Prix</th>
+												<!-- <th>Prix</th> -->
 												<th>Durée</th>
 												<th> </th>
 											</tr>
 										</thead>
 										<tbody>
-										@@include("offre.html', {
-											"nom": "Entrepreunariat",
-											"des": "Enrichir son idée de l'entrepreneuriat ",
-											"prix": 749,
-											"duree": 2
-										})
-										@@include("offre.html', {
-											"nom": "Entrepreneur Box",
-											"des": "Toutes les clés et ressources pour monter sa boite",
-											"prix": 999,
-											"duree": 2
-										})
+										@@include('db/Entrep')
+
 
 										</tbody>
 									</table>
@@ -112,24 +89,14 @@
 											<tr>
 												<th>Nom</th>
 												<th>Description</th>
-												<th>Prix</th>
+												<!-- <th>Prix</th> -->
 												<th>Durée</th>
 												<th> </th>
 											</tr>
 										</thead>
 										<tbody>
-										@@include("offre.html', {
-											"nom": "Git",
-											"des": "Utiliser Git pour versionner les projets",
-											"prix": 1049,
-											"duree": 2
-										})
-										@@include("offre.html', {
-											"nom": "Docker",
-											"des": "Une nouvelle génération de déploiements serveurs",
-											"prix": 1049,
-											"duree": 2
-										})
+										@@include('db/Tech')
+
 
 										</tbody>
 									</table>
@@ -146,7 +113,7 @@
 											<tr>
 												<th>Nom</th>
 												<th>Description</th>
-												<th>Prix</th>
+												<!-- <th>Prix</th> -->
 												<th>Durée</th>
 												<th> </th>
 											</tr>
@@ -155,7 +122,7 @@
 
 										@@include("offre.html', {
 											"nom": "Culture digitale 101",
-											"des": "Apprenez les bases de cet univers",
+											"des": "Apprendre les bases de cet univers",
 											"prix": 749,
 											"duree": 1
 										})
@@ -170,7 +137,7 @@
 										@@include("offre.html', {
 											"nom": "Travailler avec des développeurs",
 											"des": "Conduire un projet numérique",
-											"prix": 1049,
+											"prix": 1149,
 											"duree": 2
 										})
 										</tbody>
@@ -187,26 +154,14 @@
 											<tr>
 												<th>Nom</th>
 												<th>Description</th>
-												<th>Prix</th>
+												<!-- <th>Prix</th> -->
 												<th>Duree</th>
 												<th></th>
 											</tr>
 										</thead>
 										<tbody>
+										@@include('db/Ecosystem')
 
-										@@include("offre.html', {
-											"nom": "Développer un écosystème d'open innovation",
-											"des": "Tirer profit du partage d'idées et compétences",
-											"prix": 749,
-											"duree": 1
-										})
-
-										@@include("offre.html', {
-											"nom": "Mener une campagne de recrutement digital",
-											"des": "Ne dépensez plus des fortunes en cabinets",
-											"prix": 1049,
-											"duree": 2
-										})
 										</tbody>
 									</table>
 								</div>
@@ -216,6 +171,9 @@
 
 						</div>
 					</section>
+					<!-- colorbox -->
+				@@include('contactform.html')
+
 				</article>
 
 				<!-- Footer -->

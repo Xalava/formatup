@@ -1,0 +1,26 @@
+@@include("offre.html', {
+	"nom": "Git",
+	"des": "Utiliser Git pour versionner les projets",
+	"prix": 1049,
+	"duree": 2
+})
+@@include("offre.html', {
+	"nom": "Docker",
+	"des": "Une nouvelle génération de déploiements serveurs",
+	"prix": 1049,
+	"duree": 2
+})
+
+@@include("offre.html', {
+	"nom": "Data Science",
+	"des": "Propulsez votre business en exploitant vos données",
+	"prix": 1549,
+	"duree": 3
+})
+
+@@include("offre.html', {
+	"nom": "UX : Experience utilisateur",
+	"des": "Apprenez la compétence la plus recherchée par les startups",
+	"prix": 1649,
+	"duree": 3
+})

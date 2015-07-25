@@ -1,0 +1,13 @@
+@@include("offre.html', {
+	"nom": "Développer un écosystème d'open innovation",
+	"des": "Tirer profit du partage d'idées et compétences",
+	"prix": 749,
+	"duree": 1
+})
+
+@@include("offre.html', {
+	"nom": "Mener une campagne de recrutement digital",
+	"des": "Ne dépensez plus des fortunes en cabinets",
+	"prix": 1149,
+	"duree": 2
+})

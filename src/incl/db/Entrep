@@ -1,0 +1,31 @@
+@@include("offre.html', {
+	"nom": "Entrepreunariat",
+	"des": "Enrichir son idée de l'entrepreneuriat ",
+	"prix": 749,
+	"duree": "½"
+})
+@@include("offre.html', {
+	"nom": "Entrepreneur Box",
+	"des": "Toutes les clés et ressources pour monter son entreprise",
+	"prix": 999,
+	"duree": 2
+})
+@@include("offre.html', {
+	"nom": "Methode Agile",
+	"des": "Renouveler ses methodes de projet pour innover",
+	"prix": 1449,
+	"duree": 2
+})
+@@include("offre.html', {
+	"nom": "Internet Of Things",
+	"des": "Vous voulez vous lancer dans les objets connectés? Panorama & prototypage",
+	"prix": 1549,
+	"duree": 3
+})
+
+@@include("offre.html', {
+	"nom": "Developper un prototype d'application",
+	"des": "Developpez vous même votre prototype pour aller chercher les investisseurs",
+	"prix": 1949,
+	"duree": 3
+})
