@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Formatup - @@nom</title>
+		<meta name="description=" content="">
+
+		@@include('head.html')
+	</head>
+	<body>
+		<!-- Page Wrapper -->
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1><a href="index.html">Formatup</a></h1>
+				@@include('nav.html')
+
+
+				<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us11.list-manage.com","uuid":"263c9551b02f4af4d2c04d7b9","lid":"da668ceabc"}) })</script>
+
+
+				</header>
+
+			<!-- Main -->
+				<article id="main">
+					<header>
+						<h2>@@nom</h2>
+					</header>
+
+					<section class="wrapper style5">
+						<div class="inner">
+							<div class="row">
+								<div class="8u -2u">
+									@@objectifs
+									
+								</div>
+							</div><!-- row -->
+
+							<div class="row">
+
+							<section class="wrapper 8u">
+								<div class="inner">
+									 @@programme
+	
+
+								</div>
+							</section>
+
+							<section class="wrapper style1 4u">
+								<div class="inner">
+								
+									@@fiche
+									
+								</div>
+							</section>
+
+
+							</div> <!-- row -->
+						</div>
+					</section>
+					
+							
+
+
+					<!-- colorbox -->
+				@@include('contactform.html')
+
+				</article>
+
+				<!-- Footer -->
+				@@include('footer.html')
+
+			</div>
+
+		<!-- Scripts -->
+		@@include('scripts.html')
+
+	</body>
+</html>

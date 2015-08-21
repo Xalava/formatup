@@ -9,6 +9,7 @@ var fileinclude = require('gulp-file-include');
 var watch = require('gulp-watch');
 
 var sitemap = require('gulp-sitemap');
+var uncss = require('gulp-uncss');
 
 // to include data from json
 // var swig = require('gulp-swig');
@@ -18,10 +19,6 @@ var sitemap = require('gulp-sitemap');
 //var getJsonData = function(file) {
 //  return require('./examples/' + path.basename(file.path) + '.json');
 //};
-
-
-
-
 
 //var offre = require('./package.json')
 
@@ -60,6 +57,9 @@ gulp.task('styles', function() {
 
   gulp.src([cssSrc])
   	.pipe(changed(cssDst))
+    .pipe(uncss({
+            html: ['./dist/**/*.html']
+        }))
     .pipe(minifyCSS())
     .pipe(gulp.dest(cssDst));
 });
@@ -88,8 +88,8 @@ gulp.task('Assets', ['imagemin','styles','optijs'], function() {
 /**************** END ASSETS *******************/
 
 
-gulp.task('Cname', function() {
-  var ftSrc = './src/CNAME',
+gulp.task('techfiles', function() {
+  var ftSrc = ['./src/CNAME','./src/robots.txt','./src/sitemap.xml']
       ftDst = './dist/';
 
   gulp.src(ftSrc)
@@ -117,7 +117,7 @@ gulp.task('deploy',['default', 'sitemap'], function () {
 
 
 // default gulp task
-gulp.task('default', ['mininclude', 'Assets','Cname', 'watchHtml','watchAssets','watchCname'], function() {
+gulp.task('default', ['mininclude', 'Assets','techfiles', 'watchHtml','watchAssets','watchCname'], function() {
 });
 
 // watch, rebuild when anything changes

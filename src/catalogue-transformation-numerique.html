@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Formatup - Catalogue des formations en transformation numérique</title>
+		<meta name="description=" content="Catalogue de nos formations professionelles en transformation numérique">
+
+		@@include('head.html')
+	</head>
+	<body>
+		<!-- Page Wrapper -->
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1><a href="index.html">Formatup</a></h1>
+				@@include('nav.html')
+
+
+				<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us11.list-manage.com","uuid":"263c9551b02f4af4d2c04d7b9","lid":"da668ceabc"}) })</script>
+
+
+				</header>
+
+			<!-- Main -->
+				<article id="main">
+					<header>
+						<h2>Nos Offres</h2>
+						<p>Formations transformation numérique</p>
+					</header>
+					<section class="wrapper style5">
+						<div class="inner">
+
+							<section>
+								<h4></h4>
+								<h5></h5>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Nom</th>
+												<th>Description</th>
+												<!-- <th>Prix</th> -->
+												<th>Durée</th>
+												<th> </th>
+											</tr>
+										</thead>
+										<tbody>
+										@@include("offre-detail.html', {
+											"nom": "Webmarketing: Les fondamentaux",
+											"des": "Les bases d'une présence en ligne efficace",
+											"prix": 1049,
+											"duree": 2,
+											"details" :"formation-Webmarketing-Fondamentaux.html"
+										})
+										@@include("offre-detail.html', {
+											"nom": "Experience utilisateur",
+											"des": "Ameliorer ses conversions par un design adapté",
+											"prix": 1049,
+											"duree": 2,
+											"details" :"formation-User-Experience.html"
+										})
+										@@include("offre-detail.html', {
+											"nom": "Gestion de projet numérique",
+											"des": "Concevoir et mener un projet digital",
+											"prix": 1049,
+											"duree": 3,
+											"details" :"formation-Gestion-Projet-Numerique.html"
+										})										 
+										</tbody>
+									</table>
+								</div>
+							</section>
+						<hr />
+
+		
+					<!-- colorbox -->
+				@@include('contactform.html')
+
+				</article>
+
+				<!-- Footer -->
+				@@include('footer.html')
+
+			</div>
+
+		<!-- Scripts -->
+		@@include('scripts.html')
+
+	</body>
+</html>
