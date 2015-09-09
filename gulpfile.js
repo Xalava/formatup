@@ -11,9 +11,15 @@ var watch = require('gulp-watch');
 var sitemap = require('gulp-sitemap');
 var uncss = require('gulp-uncss');
 
+
 // to include data from json
-// var swig = require('gulp-swig');
-// var data = require('gulp-data');
+var swig = require('gulp-swig');
+var data = require('gulp-data');
+var getJsonData = function(file) {
+  return require('./src/db/offres.json');
+};
+
+
 // var getJsonData = require('https://spreadsheets.google.com/feeds/cells/1bTuZdyAJaR8GW-Pa_PKCJjkGNhMdm12X3krLIaImRYo/1/public/values?alt=json');
 
 //var getJsonData = function(file) {
@@ -21,6 +27,26 @@ var uncss = require('gulp-uncss');
 //};
 
 //var offre = require('./package.json')
+
+// var gulpSheets = require('gulp-google-spreadsheets')
+
+// gulp.task('fetchdata', function() {
+//   gulpSheets("1bTuZdyAJaR8GW-Pa_PKCJjkGNhMdm12X3krLIaImRYo")
+//     .pipe(gulp.dest('./dist/'));
+// });
+gulp.task('testdata', function() {
+  var htmlSrc = './src/catalogue-formations-TEST.html',
+      htmlDst = './dist/';
+
+  gulp.src(htmlSrc)
+    .pipe(fileinclude({
+        prefix: '@@',
+        basepath: './src/incl/'
+      }))
+    .pipe(data(getJsonData))
+    .pipe(swig())
+    .pipe(gulp.dest(htmlDst));
+});
 
 
 // Minify & include html

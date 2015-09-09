@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Formatup - Catalogue des formations</title>
+		<meta name="description=" content="Catalogue de nos formations professionelles en webmarketing, technologies numériques, creativité, open innovation...">
+
+		@@include('head2.html')
+	</head>
+	<body>
+		<!-- Page Wrapper -->
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1><a href="index.html">Formatup</a></h1>
+				@@include('nav.html')
+
+
+				<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us11.list-manage.com","uuid":"263c9551b02f4af4d2c04d7b9","lid":"da668ceabc"}) })</script>
+
+
+				</header>
+
+			<!-- Main -->
+				<article id="main">
+					<header>
+						<h2>Nos Offres</h2>
+						<p>Notre catalogue de formation</p>
+					</header>
+					<section class="wrapper style5">
+						<div class="inner">
+
+							<section>
+								<h4>Testinage</h4>
+								<h5></h5>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Nom</th>
+												<th>Description</th>
+												<!-- <th>Prix</th> -->
+												<th>Durée</th>
+												<th> </th>
+											</tr>
+										</thead>
+										<tbody>
+										
+									{% for line in offres %}
+									{% if line.Etat %} 
+									<tr>
+	<td>@@nom</td>
+	<td><I>@@des</I></td>
+	<!-- <td>@@prix  € HT</td> -->
+	<td>@@duree   j</td>
+	<td>
+	<!-- 	<a href="mailto:contact@formatup.com?Subject=Réservation%20@@nom" class="button special fit small icon fa-check">Préinscription</a> -->
+		<a class='inline button special fit small icon fa-check' href="#inline_content">Inscription</a>
+
+		<a class='button fit small icon fa-list' href="@@details">Détails</a>
+  
+
+	</td>
+</tr>
+
+
+										 
+										 		<li>{{ line.description }}</li>
+
+										 {% endif %}
+
+									{% endfor %}
+									 
+										</tbody>
+									</table>
+								</div>
+							</section>
+						<hr />
+
+
+
+					<section class="wrapper style5">
+						<div class="inner">
+
+							<section>
+								<h4>Communication numérique</h4>
+								<h5></h5>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Nom</th>
+												<th>Description</th>
+												<!-- <th>Prix</th> -->
+												<th>Durée</th>
+												<th> </th>
+											</tr>
+										</thead>
+										<tbody>
+										@@include('db/ComNum')
+
+
+
+										 
+										</tbody>
+									</table>
+								</div>
+							</section>
+						<hr />
+
+						<section>
+								<h4>Entrepreneuriat et gestion de projet</h4>
+								<h5></h5>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Nom</th>
+												<th>Description</th>
+												<!-- <th>Prix</th> -->
+												<th>Durée</th>
+												<th> </th>
+											</tr>
+										</thead>
+										<tbody>
+										@@include('db/Entrep')
+
+
+										</tbody>
+									</table>
+								</div>
+							</section>
+						<hr />
+
+						<section>
+								<h4>Outils technologiques</h4>
+								<h5></h5>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Nom</th>
+												<th>Description</th>
+												<!-- <th>Prix</th> -->
+												<th>Durée</th>
+												<th> </th>
+											</tr>
+										</thead>
+										<tbody>
+										@@include('db/Tech')
+
+
+										</tbody>
+									</table>
+								</div>
+							</section>
+						<hr />
+
+						<section>
+								<h4>Créativité & culture numérique</h4>
+								<h5></h5>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Nom</th>
+												<th>Description</th>
+												<!-- <th>Prix</th> -->
+												<th>Durée</th>
+												<th> </th>
+											</tr>
+										</thead>
+										<tbody>
+
+										@@include("offre.html', {
+											"nom": "Culture digitale 101",
+											"des": "Apprendre les bases de cet univers",
+											"prix": 749,
+											"duree": 1
+										})
+
+										@@include("offre.html', {
+											"nom": "Arts Numériques",
+											"des": "Utiliser le numérique pour s'exprimer",
+											"prix": 749,
+											"duree": 1
+										})
+
+										@@include("offre.html', {
+											"nom": "Travailler avec des développeurs",
+											"des": "Conduire un projet numérique",
+											"prix": 1149,
+											"duree": 2
+										})
+										</tbody>
+									</table>
+								</div>
+							</section>
+						<hr />
+						<section>
+								<h4>Ecosystèmes d'innovation</h4>
+								<h5>Destiné aux décisionnaires publics et privés voulant travailler en synergie avec les écosystèmes d'innovation</h5>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Nom</th>
+												<th>Description</th>
+												<!-- <th>Prix</th> -->
+												<th>Duree</th>
+												<th></th>
+											</tr>
+										</thead>
+										<tbody>
+										@@include('db/Ecosystem')
+
+										</tbody>
+									</table>
+								</div>
+							</section>
+
+						<hr />
+
+						</div>
+					</section>
+					<!-- colorbox -->
+				@@include('contactform.html')
+
+				</article>
+
+				<!-- Footer -->
+				@@include('footer.html')
+
+			</div>
+
+		<!-- Scripts -->
+		@@include('scripts.html')
+
+	</body>
+</html>
