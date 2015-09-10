@@ -27,83 +27,27 @@
 						<h2>Nos Offres</h2>
 						<p>Notre catalogue de formation</p>
 					</header>
+
 					<section class="wrapper style5">
 						<div class="inner">
 
 							<section>
-								<h4>Testinage</h4>
+								<h4>Publié</h4>
+
 								<h5></h5>
 								<div class="table-wrapper">
-									<table>
-										<thead>
-											<tr>
-												<th>Nom</th>
-												<th>Description</th>
-												<!-- <th>Prix</th> -->
-												<th>Durée</th>
-												<th> </th>
-											</tr>
-										</thead>
-										<tbody>
-										
-									{% for line in offres %}
-									{% if line.Etat %} 
-									<tr>
-	<td>@@nom</td>
-	<td><I>@@des</I></td>
-	<!-- <td>@@prix  € HT</td> -->
-	<td>@@duree   j</td>
-	<td>
-	<!-- 	<a href="mailto:contact@formatup.com?Subject=Réservation%20@@nom" class="button special fit small icon fa-check">Préinscription</a> -->
-		<a class='inline button special fit small icon fa-check' href="#inline_content">Inscription</a>
-
-		<a class='button fit small icon fa-list' href="@@details">Détails</a>
-  
-
-	</td>
-</tr>
-
-
-										 
-										 		<li>{{ line.description }}</li>
-
-										 {% endif %}
-
-									{% endfor %}
-									 
-										</tbody>
-									</table>
+								{% set optionsTbl = {'etat': 'P', 'categorie':'webmarketing'} %}
+								{% include "./incl/table.html" with options %}
 								</div>
 							</section>
-						<hr />
 
-
-
-					<section class="wrapper style5">
-						<div class="inner">
 
 							<section>
 								<h4>Communication numérique</h4>
 								<h5></h5>
 								<div class="table-wrapper">
-									<table>
-										<thead>
-											<tr>
-												<th>Nom</th>
-												<th>Description</th>
-												<!-- <th>Prix</th> -->
-												<th>Durée</th>
-												<th> </th>
-											</tr>
-										</thead>
-										<tbody>
-										@@include('db/ComNum')
-
-
-
-										 
-										</tbody>
-									</table>
+								{% set optionsTbl = {'etat': 'L', 'categorie':'webmarketing'} %}
+								{% include "./incl/table.html" with options %}
 								</div>
 							</section>
 						<hr />
@@ -113,20 +57,8 @@
 								<h5></h5>
 								<div class="table-wrapper">
 									<table>
-										<thead>
-											<tr>
-												<th>Nom</th>
-												<th>Description</th>
-												<!-- <th>Prix</th> -->
-												<th>Durée</th>
-												<th> </th>
-											</tr>
-										</thead>
-										<tbody>
-										@@include('db/Entrep')
-
-
-										</tbody>
+								{% set optionsTbl = {'etat': 'L', 'categorie':'intraprenariat'} %}
+								{% include "./incl/table.html" with options %}
 									</table>
 								</div>
 							</section>
@@ -136,22 +68,8 @@
 								<h4>Outils technologiques</h4>
 								<h5></h5>
 								<div class="table-wrapper">
-									<table>
-										<thead>
-											<tr>
-												<th>Nom</th>
-												<th>Description</th>
-												<!-- <th>Prix</th> -->
-												<th>Durée</th>
-												<th> </th>
-											</tr>
-										</thead>
-										<tbody>
-										@@include('db/Tech')
-
-
-										</tbody>
-									</table>
+								{% set optionsTbl = {'etat': 'L', 'categorie':'tech'} %}
+								{% include "./incl/table.html" with options %}
 								</div>
 							</section>
 						<hr />
@@ -160,40 +78,10 @@
 								<h4>Créativité & culture numérique</h4>
 								<h5></h5>
 								<div class="table-wrapper">
-									<table>
-										<thead>
-											<tr>
-												<th>Nom</th>
-												<th>Description</th>
-												<!-- <th>Prix</th> -->
-												<th>Durée</th>
-												<th> </th>
-											</tr>
-										</thead>
-										<tbody>
+								{% set optionsTbl = {'etat': 'L', 'categorie':'culture'} %}
+								{% include "./incl/table.html" with options %}
 
-										@@include("offre.html', {
-											"nom": "Culture digitale 101",
-											"des": "Apprendre les bases de cet univers",
-											"prix": 749,
-											"duree": 1
-										})
 
-										@@include("offre.html', {
-											"nom": "Arts Numériques",
-											"des": "Utiliser le numérique pour s'exprimer",
-											"prix": 749,
-											"duree": 1
-										})
-
-										@@include("offre.html', {
-											"nom": "Travailler avec des développeurs",
-											"des": "Conduire un projet numérique",
-											"prix": 1149,
-											"duree": 2
-										})
-										</tbody>
-									</table>
 								</div>
 							</section>
 						<hr />
@@ -201,21 +89,8 @@
 								<h4>Ecosystèmes d'innovation</h4>
 								<h5>Destiné aux décisionnaires publics et privés voulant travailler en synergie avec les écosystèmes d'innovation</h5>
 								<div class="table-wrapper">
-									<table>
-										<thead>
-											<tr>
-												<th>Nom</th>
-												<th>Description</th>
-												<!-- <th>Prix</th> -->
-												<th>Duree</th>
-												<th></th>
-											</tr>
-										</thead>
-										<tbody>
-										@@include('db/Ecosystem')
-
-										</tbody>
-									</table>
+								{% set optionsTbl = {'etat': 'L', 'categorie':'ecosystem'} %}
+								{% include "./incl/table.html" with options %}
 								</div>
 							</section>
 

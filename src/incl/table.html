@@ -1,0 +1,31 @@
+<table>
+	<thead>
+		<tr>
+			<th>Nom</th>
+			<th>Description</th>
+			<!-- <th>Prix</th> -->
+			<th>Durée</th>
+			<th> </th>
+		</tr>
+	</thead>
+
+	<tbody>	
+	{% for line in offres %}
+		{% if optionsTbl.etat == line.etat && optionsTbl.categorie == line.categorie %} 
+		<tr>
+			<td>{{ line.intitule }}</td>
+			<td><I>{{ line.description }}</I></td>
+			<!-- <td>@@prix  € HT</td> -->
+			<td>{{ line.duree }} j</td>
+			<td>
+				<a class='inline button special fit small icon fa-check' href="#inline_content">Inscription</a>
+				{% if line.details %}
+				<a class='button fit small icon fa-list' href="{{ line.details}}">Détails</a>
+				{% endif %}
+			</td>
+		</tr>
+		{% endif %}
+	{% endfor %}
+
+	</tbody>
+</table>

@@ -15,6 +15,7 @@ var uncss = require('gulp-uncss');
 // to include data from json
 var swig = require('gulp-swig');
 var data = require('gulp-data');
+
 var getJsonData = function(file) {
   return require('./src/db/offres.json');
 };

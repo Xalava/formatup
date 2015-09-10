@@ -3,3 +3,4 @@ dist
 .publish
 rsv
 npm-debug.log
+db
